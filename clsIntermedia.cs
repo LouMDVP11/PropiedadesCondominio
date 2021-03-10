@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PropiedadesCondominio
 {
-    public class clsNomApCuota
+    public class clsIntermedia
     {
         int no_deCasa;
         double cuotaMantenimiento;
