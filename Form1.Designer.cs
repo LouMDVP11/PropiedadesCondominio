@@ -37,9 +37,14 @@
             this.btnOrdenar = new System.Windows.Forms.Button();
             this.btnReestablecer = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.registrarPropiedadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarPropietarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPropiedades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPropietarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermedia)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgPropiedades
@@ -98,7 +103,6 @@
             this.label3.Size = new System.Drawing.Size(167, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Propietarios y sus cuotas";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnOrdenar
             // 
@@ -127,6 +131,39 @@
             this.btnMostrar.Text = "Mostrar Datos";
             this.btnMostrar.UseVisualStyleBackColor = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarPropiedadToolStripMenuItem,
+            this.registrarPropietarioToolStripMenuItem,
+            this.actualizarToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(714, 28);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // registrarPropiedadToolStripMenuItem
+            // 
+            this.registrarPropiedadToolStripMenuItem.Name = "registrarPropiedadToolStripMenuItem";
+            this.registrarPropiedadToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
+            this.registrarPropiedadToolStripMenuItem.Text = "🏚 Registrar propiedad";
+            this.registrarPropiedadToolStripMenuItem.Click += new System.EventHandler(this.registrarPropiedadToolStripMenuItem_Click);
+            // 
+            // registrarPropietarioToolStripMenuItem
+            // 
+            this.registrarPropietarioToolStripMenuItem.Name = "registrarPropietarioToolStripMenuItem";
+            this.registrarPropietarioToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.registrarPropietarioToolStripMenuItem.Text = "👩🏻‍🤝‍🧑🏻 Registrar propietario";
+            this.registrarPropietarioToolStripMenuItem.Click += new System.EventHandler(this.registrarPropietarioToolStripMenuItem_Click);
+            // 
+            // actualizarToolStripMenuItem
+            // 
+            this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
+            this.actualizarToolStripMenuItem.Text = "↻ Actualizar";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,7 +178,9 @@
             this.Controls.Add(this.dtgIntermedia);
             this.Controls.Add(this.dtgPropietarios);
             this.Controls.Add(this.dtgPropiedades);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Propiedades y Propietarios";
@@ -149,6 +188,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgPropiedades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPropietarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermedia)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,6 +206,10 @@
         private System.Windows.Forms.Button btnOrdenar;
         private System.Windows.Forms.Button btnReestablecer;
         private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem registrarPropiedadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarPropietarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actualizarToolStripMenuItem;
     }
 }
 
