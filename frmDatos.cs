@@ -49,13 +49,11 @@ namespace PropiedadesCondominio
 
         }
         private void propietarioConMasPropiedades() {
-            //Alumno mayor = alumnos.OrderByDescending(al => al.Promedio).First();
             clsCantidadPropiedades datoTemp = lstDatosCantidadPropiedades.OrderByDescending(dato => dato.CantidadPropiedades).First();
             lblPropietarioMasPropiedades.Text = "DPI: " + datoTemp.Dpi + "\nNombre: " + datoTemp.NombreApellido + "\nCantidad de propiedades: " + datoTemp.CantidadPropiedades;
         }
         private void propietarioConCuotaAlta()
         {
-            //Alumno mayor = alumnos.OrderByDescending(al => al.Promedio).First();
             clsCantidadPropiedades datoTemp = lstDatosCantidadPropiedades.OrderByDescending(dato => dato.CuotaMantenimientoTotal).First();
             lblCuotaAlta.Text = "DPI: " + datoTemp.Dpi + "\nNombre: " + datoTemp.NombreApellido + "\nCuota a pagar: " + datoTemp.CuotaMantenimientoTotal;
         }
