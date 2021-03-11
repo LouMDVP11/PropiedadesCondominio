@@ -112,6 +112,7 @@
             this.btnOrdenar.TabIndex = 6;
             this.btnOrdenar.Text = "Ordenar por cuota de manteimiento";
             this.btnOrdenar.UseVisualStyleBackColor = true;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
             // 
             // btnReestablecer
             // 
@@ -121,6 +122,7 @@
             this.btnReestablecer.TabIndex = 7;
             this.btnReestablecer.Text = "Reestablecer";
             this.btnReestablecer.UseVisualStyleBackColor = true;
+            this.btnReestablecer.Click += new System.EventHandler(this.btnReestablecer_Click);
             // 
             // menuStrip1
             // 

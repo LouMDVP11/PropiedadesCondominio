@@ -65,6 +65,7 @@ namespace PropiedadesCondominio
                 intermediaTemp.CuotaMantenimiento = p.CuotaMantenimiento;
                 intermediaTemp.Nombre = propietarioTemp.Nombre;
                 intermediaTemp.Apellido = propietarioTemp.Apellido;
+                lstIntermedia.Add(intermediaTemp);
             }
             dtgPropiedades.DataSource = null;
             dtgPropiedades.DataSource = lstPropiedades;
@@ -99,6 +100,21 @@ namespace PropiedadesCondominio
         {
             //Llamado a la función de cargar datos para 'actualizar' los datos
             loadData();
+        }
+
+        private void btnOrdenar_Click(object sender, EventArgs e)
+        {
+            List<clsIntermedia> lstIntermediaTemp = lstIntermedia.OrderBy(p=> p.CuotaMantenimiento).ToList();
+            dtgIntermedia.DataSource = null;
+            dtgIntermedia.DataSource = lstIntermediaTemp;
+            dtgIntermedia.Refresh();
+        }
+
+        private void btnReestablecer_Click(object sender, EventArgs e)
+        {
+            dtgIntermedia.DataSource = null;
+            dtgIntermedia.DataSource = lstIntermedia;
+            dtgIntermedia.Refresh();
         }
     }
 }
