@@ -78,17 +78,20 @@ namespace PropiedadesCondominio
         }
         private void registrarPropiedadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPropiedades formulario = new frmPropiedades();
-            formulario.lstPropietarios = this.lstPropietarios;
-            formulario.lstPropiedades = this.lstPropiedades;
-            formulario.ShowDialog();
+            if (lstPropietarios.Count > 0)
+            {
+                frmPropiedades formulario = new frmPropiedades();
+                formulario.lstPropietarios = this.lstPropietarios;
+                formulario.lstPropiedades = this.lstPropiedades;
+                formulario.ShowDialog();
+            }
+            else MessageBox.Show("Antes de registrar una propiedad, debe registrar un propietario.");
         }
 
         private void registrarPropietarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPropietarios formulario = new frmPropietarios();
             formulario.lstPropietarios = this.lstPropietarios;
-            formulario.actualizar();
             formulario.ShowDialog();
         }
 
