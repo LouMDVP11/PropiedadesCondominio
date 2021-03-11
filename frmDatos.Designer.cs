@@ -71,20 +71,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Monospac821 BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 169);
+            this.label4.Font = new System.Drawing.Font("Monospac821 BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(16, 170);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(369, 20);
+            this.label4.Size = new System.Drawing.Size(332, 18);
             this.label4.TabIndex = 26;
             this.label4.Text = "3 Cuotas de mantenimiento más altas:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Monospac821 BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(402, 169);
+            this.label6.Font = new System.Drawing.Font("Monospac821 BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(404, 170);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(369, 20);
+            this.label6.Size = new System.Drawing.Size(332, 18);
             this.label6.TabIndex = 27;
             this.label6.Text = "3 Cuotas de mantenimiento más bajas:";
             // 
@@ -92,7 +92,7 @@
             // 
             this.lbCuotasAltas.FormattingEnabled = true;
             this.lbCuotasAltas.ItemHeight = 16;
-            this.lbCuotasAltas.Location = new System.Drawing.Point(19, 203);
+            this.lbCuotasAltas.Location = new System.Drawing.Point(19, 191);
             this.lbCuotasAltas.Name = "lbCuotasAltas";
             this.lbCuotasAltas.Size = new System.Drawing.Size(355, 84);
             this.lbCuotasAltas.TabIndex = 28;
@@ -101,7 +101,7 @@
             // 
             this.lbCuotasBajas.FormattingEnabled = true;
             this.lbCuotasBajas.ItemHeight = 16;
-            this.lbCuotasBajas.Location = new System.Drawing.Point(406, 203);
+            this.lbCuotasBajas.Location = new System.Drawing.Point(406, 191);
             this.lbCuotasBajas.Name = "lbCuotasBajas";
             this.lbCuotasBajas.Size = new System.Drawing.Size(355, 84);
             this.lbCuotasBajas.TabIndex = 29;
@@ -110,7 +110,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Monospac821 BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 318);
+            this.label2.Location = new System.Drawing.Point(15, 311);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(349, 20);
             this.label2.TabIndex = 31;
@@ -119,7 +119,7 @@
             // lblCuotaAlta
             // 
             this.lblCuotaAlta.AutoSize = true;
-            this.lblCuotaAlta.Location = new System.Drawing.Point(16, 349);
+            this.lblCuotaAlta.Location = new System.Drawing.Point(16, 342);
             this.lblCuotaAlta.Name = "lblCuotaAlta";
             this.lblCuotaAlta.Size = new System.Drawing.Size(215, 17);
             this.lblCuotaAlta.TabIndex = 30;
