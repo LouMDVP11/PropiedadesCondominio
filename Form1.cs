@@ -83,6 +83,7 @@ namespace PropiedadesCondominio
         {
             if (lstPropietarios.Count > 0)
             {
+                loadData();
                 frmPropiedades formulario = new frmPropiedades();
                 formulario.lstPropietarios = this.lstPropietarios;
                 formulario.lstPropiedades = this.lstPropiedades;
@@ -93,6 +94,7 @@ namespace PropiedadesCondominio
 
         private void registrarPropietarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            loadData();
             frmPropietarios formulario = new frmPropietarios();
             formulario.lstPropietarios = this.lstPropietarios;
             formulario.ShowDialog();
@@ -117,6 +119,7 @@ namespace PropiedadesCondominio
         {
             if (lstPropiedades.Count > 0)
             {
+                loadData();
                 frmDatos formulario = new frmDatos();
                 formulario.lstPropietarios = this.lstPropietarios;
                 formulario.lstPropiedades = this.lstPropiedades;
