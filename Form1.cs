@@ -88,6 +88,7 @@ namespace PropiedadesCondominio
         {
             frmPropietarios formulario = new frmPropietarios();
             formulario.lstPropietarios = this.lstPropietarios;
+            formulario.actualizar();
             formulario.ShowDialog();
         }
 
