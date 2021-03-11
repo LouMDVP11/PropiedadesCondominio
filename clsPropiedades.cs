@@ -11,7 +11,7 @@ namespace PropiedadesCondominio
         int no_deCasa, dpiDueño;
         double cuotaMantenimiento;
         public int No_deCasa { get => no_deCasa; set => no_deCasa = value; }
-        public int DpiDueño { get => dpiDueño; set => dpiDueño = value; }
+        public int Dpi_Dueño { get => dpiDueño; set => dpiDueño = value; }
         public double CuotaMantenimiento { get => cuotaMantenimiento; set => cuotaMantenimiento = value; }
     }
 }

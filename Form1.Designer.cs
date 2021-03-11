@@ -34,13 +34,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnOrdenar = new System.Windows.Forms.Button();
             this.btnReestablecer = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registrarPropiedadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarPropietarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rbAscendente = new System.Windows.Forms.RadioButton();
+            this.rbDescendente = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPropiedades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPropietarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgIntermedia)).BeginInit();
@@ -104,16 +106,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Propietarios y sus cuotas";
             // 
-            // btnOrdenar
-            // 
-            this.btnOrdenar.Location = new System.Drawing.Point(422, 497);
-            this.btnOrdenar.Name = "btnOrdenar";
-            this.btnOrdenar.Size = new System.Drawing.Size(154, 46);
-            this.btnOrdenar.TabIndex = 6;
-            this.btnOrdenar.Text = "Ordenar por cuota de manteimiento";
-            this.btnOrdenar.UseVisualStyleBackColor = true;
-            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
-            // 
             // btnReestablecer
             // 
             this.btnReestablecer.Location = new System.Drawing.Point(593, 499);
@@ -164,6 +156,40 @@
             this.mostrarDatosToolStripMenuItem.Name = "mostrarDatosToolStripMenuItem";
             this.mostrarDatosToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.mostrarDatosToolStripMenuItem.Text = "📝 Mostrar datos";
+            this.mostrarDatosToolStripMenuItem.Click += new System.EventHandler(this.mostrarDatosToolStripMenuItem_Click);
+            // 
+            // rbAscendente
+            // 
+            this.rbAscendente.AutoSize = true;
+            this.rbAscendente.Location = new System.Drawing.Point(342, 511);
+            this.rbAscendente.Name = "rbAscendente";
+            this.rbAscendente.Size = new System.Drawing.Size(104, 21);
+            this.rbAscendente.TabIndex = 10;
+            this.rbAscendente.TabStop = true;
+            this.rbAscendente.Text = "Ascendente";
+            this.rbAscendente.UseVisualStyleBackColor = true;
+            this.rbAscendente.CheckedChanged += new System.EventHandler(this.rbAscendente_CheckedChanged);
+            // 
+            // rbDescendente
+            // 
+            this.rbDescendente.AutoSize = true;
+            this.rbDescendente.Location = new System.Drawing.Point(452, 511);
+            this.rbDescendente.Name = "rbDescendente";
+            this.rbDescendente.Size = new System.Drawing.Size(113, 21);
+            this.rbDescendente.TabIndex = 11;
+            this.rbDescendente.TabStop = true;
+            this.rbDescendente.Text = "Descendente";
+            this.rbDescendente.UseVisualStyleBackColor = true;
+            this.rbDescendente.CheckedChanged += new System.EventHandler(this.rbDescendente_CheckedChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(170, 513);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(134, 17);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Ordenar por Cuotas";
             // 
             // Form1
             // 
@@ -171,8 +197,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(799, 552);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.rbDescendente);
+            this.Controls.Add(this.rbAscendente);
             this.Controls.Add(this.btnReestablecer);
-            this.Controls.Add(this.btnOrdenar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -204,13 +232,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnOrdenar;
         private System.Windows.Forms.Button btnReestablecer;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem registrarPropiedadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarPropietarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarDatosToolStripMenuItem;
+        private System.Windows.Forms.RadioButton rbAscendente;
+        private System.Windows.Forms.RadioButton rbDescendente;
+        private System.Windows.Forms.Label label4;
     }
 }
 

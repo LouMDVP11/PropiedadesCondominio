@@ -19,6 +19,8 @@ namespace PropiedadesCondominio
         public Form1()
         {
             InitializeComponent();
+            rbAscendente.Checked = false;
+            rbDescendente.Checked = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -51,7 +53,7 @@ namespace PropiedadesCondominio
             {
                 clsPropiedades propiedadTemp = new clsPropiedades();
                 propiedadTemp.No_deCasa = Convert.ToInt32(reader2.ReadLine());
-                propiedadTemp.DpiDueño = Convert.ToInt32(reader2.ReadLine());
+                propiedadTemp.Dpi_Dueño = Convert.ToInt32(reader2.ReadLine());
                 propiedadTemp.CuotaMantenimiento = Convert.ToDouble(reader2.ReadLine());
                 lstPropiedades.Add(propiedadTemp);
             }
@@ -60,7 +62,7 @@ namespace PropiedadesCondominio
             foreach (var p in lstPropiedades) {
                 clsIntermedia intermediaTemp = new clsIntermedia();
                 //buscar los datos de un propietario en base al DPI y asignarlos a la lista intermedia
-                clsPropietario propietarioTemp = lstPropietarios.Find(n => n.Dpi == p.DpiDueño);
+                clsPropietario propietarioTemp = lstPropietarios.Find(n => n.Dpi == p.Dpi_Dueño);
                 intermediaTemp.No_deCasa = p.No_deCasa;
                 intermediaTemp.CuotaMantenimiento = p.CuotaMantenimiento;
                 intermediaTemp.Nombre = propietarioTemp.Nombre;
@@ -102,18 +104,41 @@ namespace PropiedadesCondominio
             loadData();
         }
 
-        private void btnOrdenar_Click(object sender, EventArgs e)
+        private void btnReestablecer_Click(object sender, EventArgs e)
         {
-            List<clsIntermedia> lstIntermediaTemp = lstIntermedia.OrderBy(p=> p.CuotaMantenimiento).ToList();
+            rbAscendente.Checked = false;
+            rbDescendente.Checked = false;
+            dtgIntermedia.DataSource = null;
+            dtgIntermedia.DataSource = lstIntermedia;
+            dtgIntermedia.Refresh();
+        }
+
+        private void mostrarDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lstPropiedades.Count > 0)
+            {
+                frmDatos formulario = new frmDatos();
+                formulario.lstPropietarios = this.lstPropietarios;
+                formulario.lstPropiedades = this.lstPropiedades;
+                formulario.lstIntermedia = this.lstIntermedia;
+                formulario.ShowDialog();
+            }
+            else MessageBox.Show("´Debe registrar una propiedad para poder generar los datos a mostrar.");
+        }
+
+        private void rbAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+            List<clsIntermedia> lstIntermediaTemp = lstIntermedia.OrderBy(p => p.CuotaMantenimiento).ToList();
             dtgIntermedia.DataSource = null;
             dtgIntermedia.DataSource = lstIntermediaTemp;
             dtgIntermedia.Refresh();
         }
 
-        private void btnReestablecer_Click(object sender, EventArgs e)
+        private void rbDescendente_CheckedChanged(object sender, EventArgs e)
         {
+            List<clsIntermedia> lstIntermediaTemp = lstIntermedia.OrderByDescending(p => p.CuotaMantenimiento).ToList();
             dtgIntermedia.DataSource = null;
-            dtgIntermedia.DataSource = lstIntermedia;
+            dtgIntermedia.DataSource = lstIntermediaTemp;
             dtgIntermedia.Refresh();
         }
     }

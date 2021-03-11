@@ -69,11 +69,11 @@ namespace PropiedadesCondominio
                     FileStream stream = new FileStream("Propiedades.txt", FileMode.Append, FileAccess.Write);
                     StreamWriter writer = new StreamWriter(stream);
                     clsPropiedades nuevaPropiedad = new clsPropiedades();
-                    nuevaPropiedad.DpiDueño = Convert.ToInt32(cmbDPI.SelectedValue);
+                    nuevaPropiedad.Dpi_Dueño = Convert.ToInt32(cmbDPI.SelectedValue);
                     nuevaPropiedad.CuotaMantenimiento = Convert.ToDouble(txtCuota.Text);
                     nuevaPropiedad.No_deCasa = Convert.ToInt32(txtNumeroCasa.Text);
                     writer.WriteLine(nuevaPropiedad.No_deCasa);
-                    writer.WriteLine(nuevaPropiedad.DpiDueño);
+                    writer.WriteLine(nuevaPropiedad.Dpi_Dueño);
                     writer.WriteLine(nuevaPropiedad.CuotaMantenimiento);
                     writer.Close();
                     this.lstPropiedades.Add(nuevaPropiedad);
